@@ -1,0 +1,7 @@
+scapy
+pyudev
+netifaces
+psutil
+plyer
+pandas
+colorama
