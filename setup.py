@@ -28,12 +28,14 @@ class Setup:
                     if detect_deauth[0] == "1" and check_print == 0:
                         victum_address = detect_deauth[1]
                         self.isdeauth_start = 1
+                        network_name = self.target_network["ssid"]
+                        network_bssid = self.target_network["bssid"]
                         if victum_address == "ff:ff:ff:ff:ff:ff":
-                            message = f"[Alert] --> Deauth detected for your selected network:  Network-name:{self.target_network["ssid"]} | Network-bssid: {self.target_network["bssid"]} | Attacker is trying to disconnect all client on the network > {victum_address}"
+                            message = f"[Alert] --> Deauth detected for your selected network:  Network-name:{network_name} | Network-bssid: {network_bssid} | Attacker is trying to disconnect all client on the network > {victum_address}"
                             print(message)
                             self.sources.sent_notifications("Deauthentication Attack Detected", message)
                         else:
-                            message = f"[Alert] --> Deauth detected for your selected network:  Network-name:{self.target_network["ssid"]} | Network-bssid: {self.target_network["bssid"]} | Attacker is trying to disconnect > {victum_address}"
+                            message = f"[Alert] --> Deauth detected for your selected network:  Network-name:{network_name} | Network-bssid: {network_bssid} | Attacker is trying to disconnect > {victum_address}"
                             print(message)
                             self.sources.sent_notifications("Deauthentication Attack Detected",message)
                         check_print += 1
