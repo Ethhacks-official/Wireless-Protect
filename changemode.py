@@ -65,7 +65,7 @@ class ChangeMode:
             print(f"\n{BLUE}[+][+]Your wireless adapter mode is successfully changed to 'Monitor'.{RESET}")
             return wireless_interface
         else:
-            print(f"\n{RED}[-][-] Due to some issues, Your wireless adapter mode could not changed to 'Managed'. Trying Again !!.{RESET}")
+            print(f"\n{RED}[-][-] Due to some issues, Your wireless adapter mode could not changed to 'Monitor'. Trying Again !!.{RESET}")
             self.changetomonitormode(wireless_interface)
 
 
