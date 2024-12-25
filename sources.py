@@ -225,15 +225,18 @@ class Sources:
             if packet.haslayer(Dot11): # type: ignore
                 if packet.type == 0 and packet.subtype == 12:
                     self.deauth_packets_no+=1
-                    if self.deauth_packets_no > 15 and self.deauth_packets_no < 25:
+                    if self.deauth_packets_no > 5 and self.deauth_packets_no < 15:
                         self.deauth_started_time = time.time()
                     if self.deauth_started_time and str(packet.addr2).lower() == bssid:
-                        if time.time() - self.deauth_started_time >= 5:
+                        if time.time() - self.deauth_started_time >= 2:
                             self.deauth_data = ["1",packet.addr1]
                             self.deauth_last_packet_time = time.time()
                 else:
                     if self.deauth_last_packet_time:
                         if time.time() - self.deauth_last_packet_time >= 10:
+                            self.deauth_packets_no = 0
+                            self.deauth_started_time = None
+                            self.deauth_last_packet_time = None
                             self.deauth_data = ["0"]
                     
                         
