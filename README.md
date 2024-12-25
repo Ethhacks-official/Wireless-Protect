@@ -30,7 +30,7 @@ OR use the requirements.txt file and install as:
 - Clonned Wifi Detection
 ---
 
-2.  Arp Spoofing and MITM Detector -->  You can select this option by pressing '1' after running the application. In this option, application detect arp Spoofing attack and man in the middle attack in selected network. After selecting this option, You need to select the network adapter for detect these attack and the mode of this network adapter should me managed mode. Also, you be connected to your target network in which you want to detect above mentioned attacks. Application will check for gateway ip and mac address of network you are connected to. Application then detect the above mentioned attacks in selected network and notify when any attack detected.
+2.  Arp Spoofing and MITM Detector -->  You can select this option by pressing '1' after running the application. In this option, application detect arp Spoofing attack and man in the middle attack in selected network on your device. After selecting this option, You need to select the network adapter for detect these attack and the mode of this network adapter should me managed mode. Also, you be connected to your target network in which you want to detect above mentioned attacks. Application will check for gateway ip and mac address of network you are connected to. Application then detect the above mentioned attacks in selected network on your device and notify when any attack detected.
 
 - Arp Spoofing Attack Detection
 - (MITM) Man in the Middle Attack Detection

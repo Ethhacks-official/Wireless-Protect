@@ -388,8 +388,7 @@ class Sources:
                     if ip_address in self.arp_table and mac_address == str(self.arp_table[ip_address]).lower():
                         pass
                     elif ip_address in self.arp_table and mac_address != str(self.arp_table[ip_address]).lower():
-                        if mac_address in self.arp_table.values():
-                            self.arp_spoofing_packet_no += 1
+                        self.arp_spoofing_packet_no += 1
                         if self.arp_spoofing_packet_no > 3:
                             self.arp_spoofing_lastpacket = time.time()
                             target_mac = self.arp_table[ip_address]
