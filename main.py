@@ -1,5 +1,8 @@
-from setup import Setup
+import sys
 import os
+
+sys.path.insert(1, f'{os.getcwd()}/src')
+from setup import Setup # type: ignore
 from colorama import init, Fore
 init()
 GREEN = Fore.GREEN
