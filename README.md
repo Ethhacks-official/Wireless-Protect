@@ -64,3 +64,7 @@ When any of the attack is detected. The application will have below features to 
 
 - `Send System Notification`
 
+
+## License
+
+This project is licensed under the GNU LESSER GENERAL PUBLIC LICENSE Version 2.1 - see the [LICENSE] file for details.
